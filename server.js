@@ -146,7 +146,7 @@ app.get('/', (req, res) => {
         <div class="container">
             <div style="text-align:center; margin-bottom:60px;">
                 <h1 style="font-size:70px; letter-spacing:-4px; margin:0; line-height:1;">Kusursuz. Güçlü.</h1>
-                <p style="color:#666; font-size:22px; margin-top:15px;">Hamza Bey'in siber güvencesiyle en iyisine ulaşın.</p>
+                <p style="color:#666; font-size:22px; margin-top:15px;">Şimdi en yeni ürünler ile fark görün.</p>
             </div>
             <div class="grid">${cards}</div>
         </div>`;
