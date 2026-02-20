@@ -1,0 +1,35 @@
+{
+    "admins": [
+        {
+            "user": "m2000",
+            "pass": "gsm_2026_ozel"
+        }
+    ],
+    "products": [
+        {
+            "id": "1",
+            "cat": "Telefon",
+            "brand": "Apple",
+            "model": "iPhone 16 Pro Max",
+            "price": 95000,
+            "img": "https://images.unsplash.com/photo-1726053303692-74d4205a2e63?w=800"
+        },
+        {
+            "id": "2",
+            "cat": "Telefon",
+            "brand": "Samsung",
+            "model": "Galaxy S24 Ultra",
+            "price": 78000,
+            "img": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800"
+        },
+        {
+            "id": "3",
+            "cat": "Tablet",
+            "brand": "Apple",
+            "model": "iPad Pro M4",
+            "price": 65000,
+            "img": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800"
+        }
+    ],
+    "orders": []
+}

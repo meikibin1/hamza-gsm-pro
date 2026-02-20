@@ -1,0 +1,28 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "marka": "Apple",
+            "model": "iPhone 15 Pro Max",
+            "fiyat": 85000,
+            "stok": 10,
+            "img": "https://images.unsplash.com/photo-1696446701796-da61225697cc?w=800"
+        },
+        {
+            "id": 2,
+            "marka": "Samsung",
+            "model": "Galaxy S24 Ultra",
+            "fiyat": 72000,
+            "stok": 5,
+            "img": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800"
+        }
+    ],
+    "orders": [],
+    "users": [
+        {
+            "username": "m2000",
+            "password": "gsm_2026_ozel",
+            "role": "admin"
+        }
+    ]
+}

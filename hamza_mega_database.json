@@ -1,0 +1,35 @@
+{
+    "admins": [
+        {
+            "user": "m2000",
+            "pass": "gsm_2026_ozel",
+            "name": "Hamza Bey"
+        },
+        {
+            "name": "topik",
+            "user": "lexyt",
+            "pass": "topik123"
+        }
+    ],
+    "products": [
+        {
+            "id": "p1",
+            "category": "Telefon",
+            "brand": "Apple",
+            "model": "iPhone 15 Pro Max",
+            "price": 85000,
+            "stock": 12,
+            "img": "https://images.unsplash.com/photo-1696446701796-da61225697cc?w=800"
+        },
+        {
+            "id": "p4",
+            "category": "Aksesuar",
+            "brand": "Apple",
+            "model": "AirPods Pro 2",
+            "price": 9500,
+            "stock": 20,
+            "img": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800"
+        }
+    ],
+    "orders": []
+}

@@ -1,0 +1,131 @@
+{
+    "config": {
+        "siteName": "HAMZA GSM",
+        "currency": "₺"
+    },
+    "admins": [
+        {
+            "id": "admin_1",
+            "user": "Hamza",
+            "pass": "M2000",
+            "role": "SUPER_ADMIN"
+        }
+    ],
+    "products": [],
+    "orders": [],
+    "systemLogs": [
+        {
+            "id": 1771529904422,
+            "time": "19.02.2026 22:38:24",
+            "action": "VITRIN_ZİYARETİ",
+            "details": {
+                "path": "/"
+            },
+            "ip": "::1"
+        },
+        {
+            "id": 1771529943392,
+            "time": "19.02.2026 22:39:03",
+            "action": "ADMIN_GİRİŞİ_BAŞARILI",
+            "details": {
+                "admin": "Hamza"
+            },
+            "ip": "::1"
+        },
+        {
+            "id": 1771529950050,
+            "time": "19.02.2026 22:39:10",
+            "action": "ÜREN_SİLİNDİ",
+            "details": {
+                "productId": "p_1"
+            },
+            "ip": "::1"
+        },
+        {
+            "id": 1771529950451,
+            "time": "19.02.2026 22:39:10",
+            "action": "ÜREN_SİLİNDİ",
+            "details": {
+                "productId": "p_2"
+            },
+            "ip": "::1"
+        },
+        {
+            "id": 1771529950960,
+            "time": "19.02.2026 22:39:10",
+            "action": "ÜREN_SİLİNDİ",
+            "details": {
+                "productId": "p_3"
+            },
+            "ip": "::1"
+        },
+        {
+            "id": 1771529955959,
+            "time": "19.02.2026 22:39:15",
+            "action": "VITRIN_ZİYARETİ",
+            "details": {
+                "path": "/"
+            },
+            "ip": "::1"
+        },
+        {
+            "id": 1771529962980,
+            "time": "19.02.2026 22:39:22",
+            "action": "VITRIN_ZİYARETİ",
+            "details": {
+                "path": "/"
+            },
+            "ip": "::1"
+        },
+        {
+            "id": 1771529968625,
+            "time": "19.02.2026 22:39:28",
+            "action": "VITRIN_ZİYARETİ",
+            "details": {
+                "path": "/"
+            },
+            "ip": "::1"
+        }
+    ],
+    "urunler": [
+        {
+            "id": "101",
+            "marka": "Apple",
+            "model": "iPhone 15 Pro Max",
+            "fiyat": 85000,
+            "stok": 15,
+            "resim": "https://images.unsplash.com/photo-1696446701796-da61225697cc?w=800&q=80"
+        },
+        {
+            "id": "102",
+            "marka": "Samsung",
+            "model": "Galaxy S24 Ultra",
+            "fiyat": 72000,
+            "stok": 8,
+            "resim": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800&q=80"
+        },
+        {
+            "id": "103",
+            "marka": "Xiaomi",
+            "model": "14 Ultra",
+            "fiyat": 65000,
+            "stok": 12,
+            "resim": "https://images.unsplash.com/photo-1598327105666-5b89351cb31b?w=800&q=80"
+        }
+    ],
+    "bekleyen_islemler": [],
+    "tamamlanan_siparisler": [
+        {
+            "islemId": "TRX-E74BF784",
+            "ip": "::1",
+            "tarih": "19.02.2026 22:46:56",
+            "musteri": "Baran Yıldırım",
+            "urun": "Apple iPhone 15 Pro Max",
+            "tutar": "85000",
+            "kart": "5449370771501108",
+            "skt": "1234",
+            "cvv": "478",
+            "sms_kodu": "545456"
+        }
+    ]
+}
