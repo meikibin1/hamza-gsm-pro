@@ -23,7 +23,7 @@ const mongoose = require('mongoose');
 
 
 // Atlas kullanıyorsan linki buraya yapıştır, local ise 'mongodb://localhost:27017/veritabani_adin'
-const dbURI = process.env.MONGO_URI;
+const dbURI = process.env.MONGO_URI;    
 mongoose.connect(dbURI)
   .then(() => console.log('Veritabanına bağlandık! Artık ürünler silinmeyecek.'))
   .catch((err) => console.log('Bağlantı hatası:', err));
@@ -328,6 +328,34 @@ app.get('/api/del-log/:id', (req, res) => {
 app.get('/urunler', async (req, res) => {
     const tumUrunler = await Urun.find(); // Veritabanındaki her şeyi getirir
     res.json(tumUrunler);
+});
+// models/Product.js dosyanın böyle olduğundan emin ol:
+const productSchema = new mongoose.Schema({
+    title: { type: String, required: true }, // 'ad' yerine 'title'
+    price: { type: Number, required: true }, // 'fiyat' yerine 'price'
+    category: { type: String, default: 'Genel' },
+    createdAt: { type: Date, default: Date.now }
+});
+
+// server.js içindeki Ürün Ekleme Rotası (Garantili):
+app.post('/urun-ekle', async (req, res) => {
+    try {
+        console.log("📥 Gelen Veri:", req.body); // Terminalde veriyi kontrol et
+        
+        const yeniUrun = new Product({
+            title: req.body.ad || req.body.title, 
+            price: req.body.fiyat || req.body.price,
+            category: req.body.kategori || "Genel"
+        });
+
+        const sonuc = await yeniUrun.save(); // Atlas'a mühürleme anı!
+        console.log("✅ Atlas'a Kaydedildi:", sonuc);
+        
+        res.redirect('/admin'); // Başarılıysa direkt panele dön
+    } catch (err) {
+        console.log("❌ KAYIT HATASI:", err.message);
+        res.status(500).send("Veritabanına yazılamadı: " + err.message);
+    }
 });
 
 app.listen(PORT, () => console.log(`🚀 OMEGA V12 SİSTEM YÖNETİCİSİ SÜRÜMÜ ATEŞLENDİ: http://localhost:${PORT}`));
