@@ -13,11 +13,20 @@
  * 4. SEARCH & CATEGORY: Vitrinde milisaniyelik arama ve kategorilendirme.
  * ==============================================================================
  */
-
+require('dotenv').config();
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const mongoose = require('mongoose');
+
+
+
+// Atlas kullanıyorsan linki buraya yapıştır, local ise 'mongodb://localhost:27017/veritabani_adin'
+const dbURI = process.env.MONGO_URI;
+mongoose.connect(dbURI)
+  .then(() => console.log('Veritabanına bağlandık! Artık ürünler silinmeyecek.'))
+  .catch((err) => console.log('Bağlantı hatası:', err));
 
 const app = express();
 const PORT = 3000;
@@ -315,6 +324,10 @@ app.get('/api/del-log/:id', (req, res) => {
     db.orders = db.orders.filter(x => x.id !== req.params.id);
     dbWrite(db);
     res.redirect(`/admin?u=${req.query.u}&p=${req.query.p}&tab=orders`);
+});
+app.get('/urunler', async (req, res) => {
+    const tumUrunler = await Urun.find(); // Veritabanındaki her şeyi getirir
+    res.json(tumUrunler);
 });
 
 app.listen(PORT, () => console.log(`🚀 OMEGA V12 SİSTEM YÖNETİCİSİ SÜRÜMÜ ATEŞLENDİ: http://localhost:${PORT}`));
