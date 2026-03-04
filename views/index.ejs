@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFO HOTEL | Antalya Luxury Accommodation</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root { --gold: #D4AF37; --dark: #050505; --soft-dark: #0c0c0c; }
+        body { background-color: var(--dark); color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .serif { font-family: 'Cinzel', serif; }
+        .gold { color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+        .border-gold { border-color: rgba(212, 175, 55, 0.3); }
+        
+        /* Özel Animasyonlar */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fade { animation: fadeIn 1s ease forwards; }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+
+        /* Hover Efektleri */
+        .room-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
+        .room-card:hover { transform: translateY(-12px); border-color: var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
+        .room-image { transition: transform 0.8s ease; }
+        .room-card:hover .room-image { transform: scale(1.1); }
+        
+        /* Parallax & Overlay */
+        .hero-overlay { background: linear-gradient(to bottom, rgba(5,5,5,0.2) 0%, rgba(5,5,5,1) 100%); }
+        .nav-blur { backdrop-filter: blur(12px); background: rgba(5,5,5,0.8); }
+        
+        .luxury-line { width: 60px; height: 1px; background: var(--gold); display: inline-block; vertical-align: middle; margin: 0 15px; }
+        
+        /* Form & Input Reset */
+        input, button { outline: none; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-[100] nav-blur border-b border-white/5 px-8 md:px-20 py-6 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <span class="text-2xl serif font-bold tracking-[0.4em] gold italic">OFO <span class="text-white">HOTEL</span></span>
+        </div>
+        
+        <div class="hidden lg:flex space-x-12 text-[10px] uppercase tracking-[0.4em] font-semibold opacity-70">
+            <a href="#home" class="hover:gold transition-all">Giriş</a>
+            <a href="#about" class="hover:gold transition-all">Hakkımızda</a>
+            <a href="#rooms" class="hover:gold transition-all">Odalar</a>
+            <a href="#experience" class="hover:gold transition-all">Deneyim</a>
+            <a href="#contact" class="hover:gold transition-all">İletişim</a>
+        </div>
+
+        <div class="flex items-center space-x-8">
+            <div class="hidden md:block text-[10px] tracking-widest opacity-40 uppercase">Antalya, TR</div>
+            <button class="lg:hidden text-white"><i data-lucide="menu"></i></button>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1920" class="w-full h-full object-cover opacity-50" alt="Lobby">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 px-4">
+            <div class="animate-fade opacity-0">
+                <span class="text-[11px] uppercase tracking-[1em] gold font-bold mb-6 block">Yeni Nesil Konaklama Deneyimi</span>
+                <h1 class="text-6xl md:text-9xl serif italic font-bold leading-none mb-8 tracking-tighter">
+                    Saf <span class="gold">Lüks</span> <br> Yeniden Tanımlandı
+                </h1>
+            </div>
+            
+            <div class="animate-fade opacity-0 delay-1 mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
+                <a href="#rooms" class="bg-gold text-black px-12 py-5 text-[10px] font-extrabold uppercase tracking-[0.4em] hover:bg-white transition-all duration-500">Odaları Keşfet</a>
+                <a href="#contact" class="border border-white/20 text-white px-12 py-5 text-[10px] font-extrabold uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all duration-500">İletişime Geç</a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce opacity-20">
+            <i data-lucide="chevron-down" class="w-6"></i>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 px-8 bg-[#080808]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div class="relative">
+                <div class="absolute -top-10 -left-10 w-40 h-40 border-t border-l border-gold/30"></div>
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800" class="rounded-lg shadow-2xl relative z-10" alt="Spa">
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 border-b border-r border-gold/30"></div>
+            </div>
+            <div class="space-y-8">
+                <h3 class="gold text-[10px] uppercase tracking-[0.6em] font-bold">Otelimiz Hakkında</h3>
+                <h2 class="text-4xl md:text-6xl serif italic leading-tight">Antalya'nın Kalbinde <br> Bir Başyapıt</h2>
+                <p class="text-sm opacity-50 leading-relaxed font-light uppercase tracking-widest">
+                    OFO Hotel, modern mimari ile Akdeniz'in huzurunu birleştiren, misafirlerine sadece konaklama değil, bir yaşam tarzı sunan Antalya'nın en prestijli noktasıdır.
+                </p>
+                <div class="flex space-x-12 pt-6">
+                    <div><span class="text-3xl serif gold block italic">120+</span> <span class="text-[9px] uppercase tracking-widest opacity-40">Lüks Oda</span></div>
+                    <div><span class="text-3xl serif gold block italic">12</span> <span class="text-[9px] uppercase tracking-widest opacity-40">Michelin Şefi</span></div>
+                    <div><span class="text-3xl serif gold block italic">24/7</span> <span class="text-[9px] uppercase tracking-widest opacity-40">Kişisel Asistan</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rooms" class="py-32 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-24 border-b border-white/5 pb-12">
+                <div>
+                    <h4 class="gold text-[10px] uppercase tracking-[0.5em] font-bold mb-4">Konaklama Koleksiyonu</h4>
+                    <h2 class="text-5xl serif italic">Lüks <span class="gold">Odalar</span></h2>
+                </div>
+                <p class="max-w-xs text-right text-[11px] opacity-40 leading-relaxed uppercase tracking-widest italic">
+                    Her biri özenle dekore edilmiş, son teknoloji ile donatılmış yaşam alanları.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <% if(odalar && odalar.length > 0) { %>
+                    <% odalar.forEach(oda => { %>
+                        <div class="room-card group bg-[#0c0c0c] border border-white/5 rounded-2xl">
+                            <div class="relative h-72 overflow-hidden">
+                                <img src="<%= oda.image || 'https://via.placeholder.com/800x600' %>" class="room-image w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-all"></div>
+                                <div class="absolute top-6 right-6 bg-black/60 backdrop-blur-md px-4 py-1 rounded-full border border-white/10">
+                                    <span class="gold text-[10px] font-bold tracking-widest">₺<%= oda.price %> / GECE</span>
+                                </div>
+                            </div>
+                            
+                            <div class="p-10">
+                                <h3 class="text-xl serif italic font-bold mb-4 uppercase tracking-widest group-hover:gold transition"><%= oda.title %></h3>
+                                <div class="flex items-center space-x-4 mb-6 text-[9px] uppercase tracking-widest opacity-40">
+                                    <span class="flex items-center"><i data-lucide="maximize" class="w-3 mr-2"></i> <%= oda.size %> M²</span>
+                                    <span>|</span>
+                                    <span class="flex items-center"><i data-lucide="map" class="w-3 mr-2"></i> <%= oda.view %></span>
+                                </div>
+                                <p class="text-xs opacity-50 mb-8 leading-relaxed h-12 overflow-hidden italic uppercase tracking-tighter"><%= oda.feature %></p>
+                                
+                                <div class="pt-6 border-t border-white/5 flex justify-between items-center">
+                                    <a href="/rezervasyon/<%= oda.id %>" class="text-[10px] font-bold gold uppercase tracking-[0.3em] hover:text-white transition">İncele & Ayırt Et</a>
+                                    <i data-lucide="arrow-right" class="w-4 gold opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all"></i>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                <% } else { %>
+                    <div class="col-span-3 text-center py-32 opacity-20 border border-dashed border-white/10 rounded-3xl">
+                        <p class="text-[11px] uppercase tracking-[1em]">Şu an tüm odalarımız doludur.</p>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-32 relative">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=1920" class="w-full h-full object-cover opacity-20" alt="Pool">
+            <div class="absolute inset-0 bg-black/80"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto text-center px-8">
+            <div class="luxury-line"></div> <span class="serif gold italic text-xl">Deneyim</span> <div class="luxury-line"></div>
+            <h2 class="text-5xl md:text-7xl serif italic font-bold my-10">Akdeniz'in <br> Eşsiz Gastronomisi</h2>
+            <p class="text-sm opacity-50 leading-loose uppercase tracking-[0.3em] mb-12 italic">
+                Sadece bir konaklama değil, damak tadınıza hitap eden Michelin yıldızlı restoranlarımız ve ruhunuzu dinlendiren ödüllü SPA merkezimizle her anınızı unutulmaz kılıyoruz.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 border border-white/5 rounded-xl hover:bg-gold/5 transition cursor-default">
+                    <i data-lucide="utensils" class="w-8 mx-auto gold mb-4"></i>
+                    <h5 class="serif italic gold text-lg mb-2">Fine Dining</h5>
+                    <p class="text-[10px] opacity-40 uppercase tracking-widest">Dünya Mutfağı</p>
+                </div>
+                <div class="p-8 border border-white/5 rounded-xl hover:bg-gold/5 transition cursor-default">
+                    <i data-lucide="waves" class="w-8 mx-auto gold mb-4"></i>
+                    <h5 class="serif italic gold text-lg mb-2">Infinity Pool</h5>
+                    <p class="text-[10px] opacity-40 uppercase tracking-widest">Sonsuzluk Havuzu</p>
+                </div>
+                <div class="p-8 border border-white/5 rounded-xl hover:bg-gold/5 transition cursor-default">
+                    <i data-lucide="wind" class="w-8 mx-auto gold mb-4"></i>
+                    <h5 class="serif italic gold text-lg mb-2">Zen Spa</h5>
+                    <p class="text-[10px] opacity-40 uppercase tracking-widest">Ruhsal Arınma</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-[#020202] pt-32 pb-12 px-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20 text-center md:text-left">
+                <div class="col-span-1 md:col-span-2 space-y-8">
+                    <div class="text-3xl serif italic gold tracking-[0.3em]">OFO HOTEL</div>
+                    <p class="text-[11px] opacity-30 max-w-sm leading-relaxed uppercase tracking-[0.2em] italic">
+                        Lüksün konforla buluştuğu nokta. Antalya'nın en seçkin adresinde yerinizi şimdiden ayırtın.
+                    </p>
+                </div>
+                <div>
+                    <h6 class="gold text-[10px] font-bold uppercase tracking-[0.5em] mb-8">Hızlı Menü</h6>
+                    <ul class="text-[10px] opacity-40 space-y-4 uppercase tracking-[0.3em]">
+                        <li><a href="#" class="hover:text-white transition">Kariyer</a></li>
+                        <li><a href="#" class="hover:text-white transition">Hizmetler</a></li>
+                        <li><a href="#" class="hover:text-white transition">Gizlilik Politikası</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="gold text-[10px] font-bold uppercase tracking-[0.5em] mb-8">İletişim</h6>
+                    <ul class="text-[10px] opacity-40 space-y-4 uppercase tracking-[0.3em]">
+                        <li>Lara / Antalya</li>
+                        <li>+90 242 000 00 00</li>
+                        <li>info@ofohotel.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[8px] opacity-20 tracking-[0.8em] uppercase italic">
+                <p>© 2026 OFO Luxury Hotels Group. Tüm Hakları Saklıdır.</p>
+                <div class="flex space-x-6 mt-6 md:mt-0">
+                    <i data-lucide="instagram" class="w-4"></i>
+                    <i data-lucide="twitter" class="w-4"></i>
+                    <i data-lucide="facebook" class="w-4"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Lucide Ikonlarını Başlat
+        lucide.createIcons();
+
+        // Sayfa Yüklendiğinde Animasyonları Tetikle
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.animate-fade').forEach(el => {
+                el.classList.remove('opacity-0');
+            });
+        });
+    </script>
+</body>
+</html>
