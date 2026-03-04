@@ -5,7 +5,7 @@ const pool = mysql.createPool({
     // DİKKAT: Burası 'u976935047_otel' olmalı (Hata mesajında 'otelsitesi' yazmışsın)
     user: 'u976935047_otel',         
     password: '1kpm@+g:H',           
-    database: 'u976935047_otelsitesi', 
+    database: 'u976935047_otel', 
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
